@@ -1,5 +1,8 @@
 <template>
   <div class="card">
+    <RouterLink to="/characters">
+      <button class="button"> Back </button>
+    </RouterLink>
     <ul v-if="character">
       <img :src="character.image" :alt="character.name">
       <li>
@@ -78,5 +81,17 @@
     justify-content: center;
     align-items: center;
   }
-
+  .button{
+    background-color: rgb(226, 229, 224);
+    margin: 30px 650px 0px 10px;
+    padding: 5px;
+    border: solid 0.5px black;
+    border-radius: 4px;
+    width: 60px;
+    font-size: 16px;
+  }
+  .button:hover{
+    background-color: rgb(217, 219, 216);
+    color: black;
+  }
 </style>
