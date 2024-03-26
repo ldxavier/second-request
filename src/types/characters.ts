@@ -1,13 +1,14 @@
 export interface ICharacter {
   id: number;
+  name: string;
   status: "alive" | "dead" | unknown;
   species: string;
   gender: string;
-  origin?: {
+  origin: {
     name: string;
     url: string;
   };
-  location?: {
+  location: {
     name: string;
     url: string;
   };
