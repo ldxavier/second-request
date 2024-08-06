@@ -9,17 +9,25 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView
   },
   {
-    path: '/request-list',
-    name: 'request-list',
-    component: () => import('../views/ListView.vue')
+    path: '/about',
+    name: 'about',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/contacts',
-    name: 'contacts',
-    component: TheContacts
-
-
+    path: '/characters',
+    name: 'characters',
+    component: () => import('../views/CharacterView.vue')
   },
+  {
+    path: '/character-details/:id',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/CharacterDetailsView.vue')
+  }
 ]
 
 const router = createRouter({
